@@ -130,7 +130,8 @@ h6 {
 /* dishes of the day styles */
 
 .sec1-dish,
-.card-dish-img {
+.card-dish-img,
+.recipe-thumbnail {
     background-size: cover;
 }
 
@@ -269,5 +270,9 @@ a:hover {
 
     .btn-try-it::after {
         content: " 🤤";
+    }
+
+    #recipe-figcaption {
+        font-size: 0.5rem;
     }
 }
