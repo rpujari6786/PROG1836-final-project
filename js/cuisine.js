@@ -11,12 +11,6 @@ if (cuisine !== "" || cuisine !== null) {
 
             let meal = data.meals[0];
 
-            let cuisineMeal = createCardBox(
-                meal.idMeal,
-                meal.strMeal,
-                meal.strMealThumb
-            );
-
             let cardGroupsSect = document.getElementById("card-groups");
 
             let fourDishes = [];
@@ -61,19 +55,15 @@ let createCardGroupRow = (fourDishes, cardGroupId) => {
 
         cardGroupSect.appendChild(dishCardBox);
 
-        let s2 = document.createElement("section");
-        s2.setAttribute("class", "col-md mx-md-4");
-        cardGroupSect.append(s2);
-
-        // if (key === 0 || key === 2) {
-        //     let s1 = document.createElement("section");
-        //     s1.setAttribute("class", "col-lg");
-        //     cardGroupSect.append(s1);
-        // } else if (key === 1) {
-        //     let s2 = document.createElement("section");
-        //     s2.setAttribute("class", "col-md col-lg");
-        //     cardGroupSect.append(s2);
-        // }
+        if (key === 0 || key === 2) {
+            let s1 = document.createElement("section");
+            s1.setAttribute("class", "col-md col-lg");
+            cardGroupSect.append(s1);
+        } else if (key === 1) {
+            let s2 = document.createElement("section");
+            s2.setAttribute("class", "col-lg");
+            cardGroupSect.append(s2);
+        }
     }
     // console.log(cardGroupSect);
 
@@ -130,7 +120,7 @@ let createCardBox = (dishId, dishTitle, imgSrc) => {
     });
 
     let cardBoxSect = document.createElement("section");
-    cardBoxSect.setAttribute("class", "card-box my-5 col-md-3 col-lg-2");
+    cardBoxSect.setAttribute("class", "card-box my-5 col-md-4 col-lg-2");
     cardBoxSect.appendChild(cardSect);
     cardBoxSect.appendChild(letsTryBtn);
 
