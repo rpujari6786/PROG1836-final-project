@@ -119,7 +119,7 @@ let createCardBox = (dishId, dishTitle, imgSrc) => {
     let letsTryBtn = document.createElement("button");
     letsTryBtn.setAttribute(
         "class",
-        "btn btn-secondary btn-try-it px-4 py-2 mt-lg-n4 mt-md-5"
+        "btn btn-secondary btn-try-it px-4 py-2 mt-lg-n4 mt-md-4"
     );
     letsTryBtn.setAttribute("title", "Try this dish 🤤");
     letsTryBtn.setAttribute("id", dishId);
